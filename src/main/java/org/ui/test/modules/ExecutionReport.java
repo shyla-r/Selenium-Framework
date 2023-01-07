@@ -25,7 +25,6 @@ public class ExecutionReport {
 			config.load( new FileInputStream(".\\src\\test\\resources\\default.properties") );
 			if (config.getProperty("cleanUpOutput").toString().contains("Y")) {
 				fileDelete(new File(config.getProperty("reportPath").toString().replace("Optional[", "").replace("]", "")));
-				fileDelete(new File(config.getProperty("responseDataPath").toString().replace("Optional[", "").replace("]", "")));
 				fileDelete(new File(".\\src\\test\\resources\\ScreenShot"));
 			}
 			reportLocation = config.getProperty("reportPath").toString().replace("Optional[", "").replace("]", "");
